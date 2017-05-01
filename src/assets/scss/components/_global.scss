@@ -1,0 +1,32 @@
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+li {
+    line-height: 20px;
+}
+
+a {
+    color: #DE5E60;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: color 0.1s linear 0s;
+    -moz-transition: color 0.1s linear 0s;
+    -o-transition: color 0.1s linear 0s;
+    transition: color 0.1s linear 0s;
+}
+
+.container {
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}

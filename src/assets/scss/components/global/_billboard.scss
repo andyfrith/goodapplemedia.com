@@ -1,0 +1,70 @@
+
+$billboard-dark-bg: rgba(0,0,0,0.6);
+$billboard-height: 10rem; //2.5rem;
+$transition: all .35s ease-in-out;
+
+.billboard {
+  text-align: center;
+  background: white;
+  background-size: cover;
+  position: relative;
+  overflow: visible;
+  padding-top: $billboard-height;
+  padding-bottom: $billboard-height;
+
+
+  &.dark {
+    background: $billboard-dark-bg;
+    color: white;
+  }
+
+  &.light {
+    background-color: #eaeaea;
+    color: #333;
+  }
+
+  .headline {
+    font-size: 55px;
+    letter-spacing: 7px;
+    line-height: 55px; text-transform: uppercase;
+    margin-bottom: 15px;
+
+    strong {
+      display: block;
+      font-size: 70px;
+      letter-spacing: 3px;
+      margin: 0; // 10px 0;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 675px;
+    margin: 0 auto 15px;
+  }
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+
+  .billboard {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    .headline {
+      font-size: 20px;
+      letter-spacing: 6px;
+      line-height: 20px;
+
+      strong {
+        font-size: 30px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+}

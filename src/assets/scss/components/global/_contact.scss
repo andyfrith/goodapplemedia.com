@@ -1,0 +1,38 @@
+
+.contact {
+  background: #5e9133;
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  //padding: 50px 15px 50px 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+
+  a {
+    color: white;
+    &:hover {
+      color: white;
+    }
+
+    .phone, .email {
+      display: table;
+
+      .phone-number, .email-address {
+        display:table-cell;
+        vertical-align:middle;
+      }
+    }
+
+
+    .font-icon-phone, .font-icon-email {
+      padding-right: 10px;
+    }
+
+    .font-icon-email {
+      position: relative;
+      top: 2px;
+    }
+  }
+}

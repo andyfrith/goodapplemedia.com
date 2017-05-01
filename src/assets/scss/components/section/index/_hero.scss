@@ -1,0 +1,41 @@
+
+.index {
+  .hero {
+    &.this-is-good-apple-media {
+      .headline {
+        font-family: 'Varela Round', sans-serif;
+        font-size: 48px;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+      }
+
+      .sub-headline {
+        max-width: inherit;
+      }
+    }
+  }
+
+  //.portfolio {
+  //  .hero {
+  //    .headline {
+  //      color: #333;
+  //      font-weight: 900;
+  //      text-transform: uppercase;
+  //    }
+  //  }
+  //}
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+
+  .index {
+    .hero {
+      &.this-is-good-apple-media {
+        .headline {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

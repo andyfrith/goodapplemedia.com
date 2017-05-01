@@ -1,0 +1,18 @@
+
+
+.panel {
+  background: rgba(230, 230, 230, 0.7);// rgba(234, 240, 228, 0.7);
+  border-top: 1px solid white;
+  margin-top: 1px;
+  padding: 30px 40px 40px 40px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  h4 {
+    color: #528037;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+}

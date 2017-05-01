@@ -1,0 +1,324 @@
+
+$global-radius: 4px;
+
+.portfolio {
+  .hero {
+    .headline {
+      color: #333;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.04);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    border-radius: $global-radius;
+  }
+
+  .image-overlay-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+  }
+
+  // modifier classes
+
+  .overlay-fade-in {
+
+    p {
+      letter-spacing: 0.15em;
+      color: #f4f4f4;
+      font-size: 28px;
+      opacity: 0;
+      transition: all 0.2s linear;
+    }
+
+    img {
+      transition: all 0.2s linear;
+    }
+
+    .image-overlay-content {
+      opacity: 0;
+      background-color: rgba(0,0,0, 0.6);
+      transition: all 0.4s ease-in-out;
+
+      //background: rgba(94, 145, 51, 0.7);
+      //opacity: 0.80;
+      filter: alpha(opacity=80);
+
+      .block {
+        height: 100%;
+        text-align: center;
+
+        &:before {
+          content: '\200B';
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+        }
+
+        .centered {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+
+      .tech-logo-holder {
+        float: left;
+        margin: 5px 0 0 5px;
+        position: absolute;
+        top: 0;
+
+        .tech-logo {
+          //position: absolute;
+          //top: 10px;
+          //left: 10px;
+          margin-left: 5px;
+          width: 25px;
+        }
+      }
+    }
+
+    h2 {
+      color: #f2f2f2;
+      font-size: 1.1rem;
+      //margin-top: 25%;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      //background: rgba(0,0,0,0.7);
+
+      //-o-transition: all .5s cubic-bezier(.52,0,.08,1) 0s;
+      //transition: all .5s cubic-bezier(.52,0,.08,1) 0s;
+      //padding: 0 10px;
+      //width: 100%;
+      //color: #54b14e;
+      //line-height: 1.1;
+      //text-transform: none;
+    }
+
+    .button {
+      line-height: 5px;
+      margin-top: -2rem;
+      font-weight: 600;
+    }
+
+    &:hover img {
+      transform: scale(1.2);
+    }
+
+    &:hover .image-overlay-content {
+      opacity: 1;
+    }
+
+    &:hover h2, p, .button {
+      opacity: 1;
+    }
+
+    &:hover p {
+      transition-delay: 0.1s;
+    }
+
+    &:hover .button {
+      transition-delay: 0.2s;
+    }
+  }
+
+  /*
+  .overlay-slide-in-left {
+
+    img {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .image-overlay-content {
+      background-image: url(http://www.awwwards.com/awards/images/2015/04/pattern.jpg);
+      background-color: rgba(0,0,0,0.3);
+      transform: translateX(-110%);
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
+      box-shadow: 0 0 7px #ccc;
+    }
+
+    h2{
+      font-size: 1.8rem;
+      background: rgba(255, 255, 255, 0.7);
+      margin-top: 40%;
+      color: #000;
+      box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+    }
+
+    p {
+      opacity: 0;
+      color: #333;
+      transition: all 0.2s linear;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      padding: 7px 14px;
+      background: #000;
+      color: #fff;
+      text-transform: uppercase;
+      box-shadow: 0 0 1px #000;
+      position: relative;
+      border-radius: 7px;
+
+      &:hover {
+        background-color: #444;
+      }
+    }
+
+    &:hover .image-overlay-content {
+      transform: translateX(0px);
+    }
+
+    &:hover img {
+      transform: translateX(80%);
+      transition-delay: 0.1s;
+    }
+
+    &:hover p{
+      opacity: 1;
+      transition-delay: 0.4s;
+    }
+  }
+
+
+  .overlay-fade-in-new-background {
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      padding: 7px 14px;
+      background: #000;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 5px;
+      box-shadow: 0 0 1px #000;
+      position: relative;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 5px #fff;
+        background-color: #222;
+      }
+    }
+
+    p{
+      font-size: 28px;
+    }
+
+    .image-overlay-content {
+      opacity: 0;
+      background-image: url(http://subtlepatterns.com/patterns/gplaypattern.png);
+      background-color: rgba(255,255,255, 0.5);
+      transition: all 0.4s ease-in-out;
+    }
+
+    h2 {
+      color: #000;
+      font-size: 1.6rem;
+      margin-top: 30%;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+    p {
+      opacity: 0;
+      transition: all 0.2s linear;
+    }
+
+    img{
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover img {
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+      //filter: gray;
+      -webkit-filter: grayscale(100%);
+      transform: scale(1.5);
+    }
+
+    &:hover .image-overlay-content {
+      opacity: 1;
+    }
+
+    &:hover h2, p, .button {
+      opacity: 1;
+    }
+
+    &:hover p {
+      transition-delay: 0.1s;
+    }
+
+    &:hover .button {
+      transition-delay: 0.2s;
+    }
+  }
+  */
+}
+
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .portfolio {
+
+    .items {
+      //padding-left: 60px;
+      //padding-right: 60px;
+    }
+
+    .image-wrapper {
+      margin-bottom: 10px;
+      //width: 220px;
+      //padding-left: 60px;
+      //padding-right: 60px;
+    }
+
+    .overlay-fade-in {
+
+      h2 {
+        //font-size: .9rem;
+      }
+
+      .button {
+        font-size: 12px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .portfolio {
+
+    .items {
+
+    }
+
+    .image-wrapper {
+
+    }
+
+    .overlay-fade-in {
+
+      h2 {
+        font-size: .9rem;
+      }
+
+      .button {
+      }
+    }
+  }
+}
