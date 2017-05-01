@@ -8,7 +8,7 @@
 <br />
 
 <div align="center"><strong>Good Apple Media</strong></div>
-<div align="center">A well deisigned portfolio website developed with one of the most advanced responsive front-end frameworks.</div>
+<div align="center">A well designed portfolio website developed with one of the most advanced responsive front-end frameworks.</div>
 
 <br />
 
